@@ -3,19 +3,24 @@
 
 struct books
 {
-char title[50];
-char author[50];
-int book_id;
+	char *title;
+	char *author;
+	int book_id;
 };
 
 int main(int argc, char **argv)
 {
-struct books prva_knjiga;
-prva_knjiga.book_id= 555;
-strcpy(prva_knjiga.title,"test");
+	struct books prva_knjiga = 
+	{
+		"",
+		"",
+		 555
+	};
+	// strcpy(prva_knjiga.title,"test");
+	typeof(int) a=5;
+	printf("%d",a);
+	printf("%s",prva_knjiga.title);
+	printf("%s",prva_knjiga.book_id);
 
-printf("%s",prva_knjiga.title);
-printf("%s",prva_knjiga.book_id);
-
-return 0;
+	return 0;
 }
