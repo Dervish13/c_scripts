@@ -1,0 +1,5 @@
+PROGRAM = mixerui
+OBJECTS = $(CXXFILES:.cpp=.o)
+CXXFLAGS != fltk-config --cxxflags
+LDFLAGS != fltk-config --ldflags
+#LDFLAGS += -l oscpp
